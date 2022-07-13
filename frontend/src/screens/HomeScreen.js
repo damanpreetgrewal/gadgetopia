@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import Slider from '../components/Slider'
 import { useDispatch, useSelector } from "react-redux";
 import { Col, Row } from "react-bootstrap";
 import Product from "../components/Product";
@@ -31,7 +32,8 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      <Meta />
+      <Meta />      
+      <Slider />
       {!keyword ? (
         <>
           <h1

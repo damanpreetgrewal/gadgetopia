@@ -27,6 +27,8 @@ const ProductCarousel = () => {
       style={{
         backgroundImage:
           'url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png")',
+          // maxWidth: '700px',
+          // margin: '0 auto'
       }}
       keyboard
     >
@@ -37,8 +39,12 @@ const ProductCarousel = () => {
               className="carousel-img"
               src={product.image}
               alt={product.name}
-              fluid={fluid}
-              rounded={true}
+              // style={{
+              //    height: '400px',
+              //    display: 'flex',
+              //    alignItems: 'center',
+              //    alignItems: 'center'
+              // }}
             />
             <Carousel.Caption className="carousel-caption">
               <h2>

@@ -27,7 +27,7 @@ const App = () => {
       <main
       //  style={{  backgroundImage: `url(${FooterBackground})`, backgroundSize: '100% 100% ',  backgroundRepeat: 'no-repeat' }} className='main py-3'
       >
-        <Container>
+        <Container fluid>
           <Route path="/order/:id" component={OrderScreen} />
           <Route path="/shipping" component={ShippingScreen} />
           <Route path="/payment" component={PaymentMethodScreen} />

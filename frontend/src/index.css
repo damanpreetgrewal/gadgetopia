@@ -174,6 +174,8 @@ h1{
 .carousel-item-prev,
 .carousel-item.active{
   display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .carousel-caption{
   position: absolute;
@@ -189,17 +191,5 @@ h1{
   margin: 60px;
 }
 .carousel a {
-  margin: 0 auto;
+  margin: 100 auto;
 }
-/* .neonStyled{
-  text-shadow:
-      0 0 7px rgb(0, 255, 200),
-      0 0 10px rgb(0, 255, 200),
-      0 0 21px rgb(0, 255, 200),
-      0 0 42px rgb(0, 255, 200),
-      0 0 82px rgb(0, 255, 200),
-      0 0 92px rgb(0, 255, 200),
-      0 0 102px rgb(0, 255, 200),
-      0 0 151px rgb(0, 255, 200);
-    }  */
-    

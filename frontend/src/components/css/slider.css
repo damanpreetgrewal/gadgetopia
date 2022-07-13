@@ -1,0 +1,130 @@
+
+.slider {
+    position: relative;
+    height: 600px;
+  }
+  .slidemod {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: all 0.4s ease-in-out;
+  }
+  .slidemod.current {
+    display: inline;
+    opacity: 1;
+  }
+  .ShopNow {
+    width: 190px;
+    align-items: center;
+    border: none;
+    background-color: #1e1e2c;
+    color: rgb(241, 241, 241);
+    border-radius: 30px;
+    font-size: 19px;
+    outline: none;
+    padding: 11px 0px;
+    transition: all ease-out 0.3s;
+  }
+  .ShopNow:hover {
+    color: #1e1e2c;
+    cursor: pointer;
+    background-color: #ebebeb;
+  }
+  .ShopNow::before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    transition: all ease 0.5s;
+  }
+  .ShopNow:hover::before {
+    transition: 0.5s all ease;
+    border-radius: 30px;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+    box-shadow: 0 5px 5px -2px rgba(0, 0, 0, 0.5);
+  }
+  /*btns */
+  .slidemod .content {
+    opacity: 0;
+    position: absolute;
+    left: -600px;
+    bottom: 70px;
+  }
+  .slidemod.current .content {
+    z-index: 1;
+    opacity: 1;
+    transform: translateX(700px);
+    transition: all 0.7s ease-in-out 0.3s;
+  }
+  
+  .slidemod .titleslider {
+    opacity: 0;
+    position: absolute;
+    top: -600px;
+    left: 100px;
+    font-size: 70px;
+    font-weight: 700;
+  }
+  .slidemod .subtitleslider {
+    opacity: 0;
+    position: absolute;
+    top: -600px;
+    left: 100px;
+    font-size: 30px;
+    font-weight: 500;
+  }
+  .slidemod.current .titleslider {
+    opacity: 1;
+    transform: translateY(870px);
+    transition: all 0.7s ease-in-out 0.3s;
+  }
+  .slidemod.current .subtitleslider {
+    opacity: 1;
+    transform: translateY(970px);
+    transition: all 0.7s ease-in-out 0.3s;
+  }
+  .next {
+    position: absolute;
+    opacity: 0.5;
+    top: 50%;
+    right: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .prev {
+    position: absolute;
+    opacity: 0.5;
+    top: 50%;
+    left: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+  }
+  .next:hover,
+  .prev:hover {
+    opacity: 1;
+  }
+  /*background Images */
+
+  
+  
+  .slidemod:first-child {
+    background: url("https://i.imgur.com/jJYOdBg.jpg") no-repeat center top/cover;
+  }
+  .slidemod:nth-child(2) {
+    background: url("https://i.imgur.com/7rwaigw.jpg") no-repeat center top/cover;
+  }
+  .slidemod:nth-child(3) {
+    background: url("https://i.imgur.com/3Obf6Tt.jpg") no-repeat center top/cover;
+  }
+  .slidemod:nth-child(4) {
+    background: url("https://i.imgur.com/laeEnPm.jpg") no-repeat center top/cover;
+  }
