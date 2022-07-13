@@ -8,8 +8,7 @@
     "start": "node backend/app",
     "server": "nodemon backend/app",
     "data:import": "node backend/seeder",
-    "data:destroy": "node backend/seeder -d",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "data:destroy": "node backend/seeder -d"    
   },
   "author": "WDD-Group7",
   "license": "ISC",
