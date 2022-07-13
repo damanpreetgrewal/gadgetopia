@@ -11,6 +11,7 @@ const ProductCarousel = () => {
 
   const topRatedProducts = useSelector((state) => state.topRatedProducts);
   const { loading, error, products } = topRatedProducts;
+  const fluid = true;
 
   useEffect(() => {
     dispatch(listTopProducts());
@@ -36,7 +37,8 @@ const ProductCarousel = () => {
               className="carousel-img"
               src={product.image}
               alt={product.name}
-              fluid
+              fluid={fluid}
+              rounded={true}
             />
             <Carousel.Caption className="carousel-caption">
               <h2>
