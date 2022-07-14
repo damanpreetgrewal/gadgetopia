@@ -11,7 +11,6 @@ const ProductCarousel = () => {
 
   const topRatedProducts = useSelector((state) => state.topRatedProducts);
   const { loading, error, products } = topRatedProducts;
-  const fluid = true;
 
   useEffect(() => {
     dispatch(listTopProducts());
@@ -22,13 +21,15 @@ const ProductCarousel = () => {
     <Message variant="error">{error}</Message>
   ) : (
     <Carousel
+      className="d-block w-100"
       pause="hover"
       fade
       style={{
         backgroundImage:
           'url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png")',
-          // maxWidth: '700px',
-          // margin: '0 auto'
+        // maxWidth: '700px',
+        // margin: '0 auto'
+        
       }}
       keyboard
     >
@@ -36,15 +37,15 @@ const ProductCarousel = () => {
         <Carousel.Item key={product._id} id={i}>
           <Link to={`/product/${product._id}`}>
             <Image
-              className="carousel-img"
+              className="carousel-img img-fluid"
               src={product.image}
               alt={product.name}
-              // style={{
-              //    height: '400px',
-              //    display: 'flex',
-              //    alignItems: 'center',
-              //    alignItems: 'center'
-              // }}
+              style={{
+                //  height: '40vh',
+                 display: 'flex',
+                 alignItems: 'center',
+                 alignItems: 'center'
+              }}
             />
             <Carousel.Caption className="carousel-caption">
               <h2>

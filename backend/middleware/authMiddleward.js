@@ -2,7 +2,7 @@ import jwt from "jsonwebtoken";
 import asyncHandler from "express-async-handler";
 import User from "../models/userModel.js";
 
-const protect = asyncHandler(async (req, resp, next) => {
+const protect = asyncHandler(async (req, res, next) => {
   let token;
 
   if (
@@ -16,21 +16,21 @@ const protect = asyncHandler(async (req, resp, next) => {
       next();
     } catch (error) {
       console.error(error);
-      resp.status(401);
+      res.status(401);
       throw new Error("Not authorized , token failed");
     }
   }
   if (!token) {
-    resp.status(401);
+    res.status(401);
     throw new Error("Not authorized , not token");
   }
 });
 
-const admin = (req, resp, next) => {
+const admin = (req, res, next) => {
   if (req.user && req.user.isAdmin) {
     next();
   } else {
-    resp.status(401);
+    res.status(401);
     throw new Error("You Dont Have That Permission");
   }
 };

@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import Slider from '../components/Slider'
+import Slider from "../components/Slider";
 import { useDispatch, useSelector } from "react-redux";
 import { Col, Row } from "react-bootstrap";
 import Product from "../components/Product";
@@ -13,11 +13,11 @@ import { Link } from "react-router-dom";
 
 const HomeScreen = ({ match }) => {
   const keyword = match.params.keyword;
-  
+
   const pageNumber = match.params.pageNumber || 1;
 
-  console.log(keyword,pageNumber);
-  
+  console.log(keyword, pageNumber);
+
   const dispatch = useDispatch();
 
   const productList = useSelector((state) => {
@@ -32,7 +32,7 @@ const HomeScreen = ({ match }) => {
 
   return (
     <>
-      <Meta />      
+      <Meta />
       <Slider />
       {!keyword ? (
         <>
@@ -54,7 +54,7 @@ const HomeScreen = ({ match }) => {
           <i className="far fa-hand-point-left"></i> Go Back{" "}
         </Link>
       )}
-      <h1>Latest Products</h1>
+      <h1 className="latest-prods">Latest Products</h1>
       {loading ? (
         <Loader />
       ) : error ? (

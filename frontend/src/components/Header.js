@@ -27,7 +27,6 @@ const Header = () => {
         variant="dark"
         expand="lg"
         collapseOnSelect
-        sticky="top"
       >
         <Container>
           <LinkContainer to="/">

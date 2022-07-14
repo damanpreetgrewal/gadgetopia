@@ -25,7 +25,7 @@ const App = () => {
     <Router>
       <Header />
       <main
-      //  style={{  backgroundImage: `url(${FooterBackground})`, backgroundSize: '100% 100% ',  backgroundRepeat: 'no-repeat' }} className='main py-3'
+        //style={{  backgroundImage: `url(${FooterBackground})`, backgroundSize: '100% 100% ',  backgroundRepeat: 'no-repeat' }} className='main py-3'
       >
         <Container fluid>
           <Route path="/order/:id" component={OrderScreen} />

@@ -52,7 +52,7 @@ const Slider = () => {
    })
  
     return (
-        <div className = 'slider'>
+        <div className = 'slider d-block w-100'>
             {SliderData.map((slide,index) =>{
                 return(
                     <div key = {index} className={index === current ? 'slidemod current' : 'slidemod'}>
