@@ -16,25 +16,32 @@ const getProducts = asyncHandler(async (req, res) => {
         },
       }
     : {};
+
+  console.log("keyword:", keyword);
+
   const count = await Product.countDocuments({ ...keyword });
+  console.log("count: ", count);
   const products = await Product.find({ ...keyword })
     .limit(pageSize)
     .skip(pageSize * (page - 1));
   
-  res.json({ products, page, pages: Math.ceil(count / pageSize) });
+  res.json({ products, page , pages: Math.ceil(count/pageSize)});
 });
+
+
 //@desc    Fetch Single Products
 //@route   GET /api/products/:id
 //@access  Public
 
 const getProductById = asyncHandler(async (req, res) => {
   const id = req.params.id;
+  console.log('productId: ',id);
   const product = await Product.findById(id);
   if (product) {
     res.json(product);
   } else {
     res.status(404);
-    throw new Error("Product not found");
+    throw new Error("Product not found!");
   }
 });
 //@desc    delete Single Products
@@ -46,10 +53,10 @@ const deleteProduct = asyncHandler(async (req, res) => {
   if (product) {
     if (product) {
       await product.remove();
-      res.json({ message: "Product removed" });
+      res.json({ message: "Product removed!" });
     } else {
       res.status(404);
-      throw new Error("Product not found");
+      throw new Error("Product not found!");
     }
   }
 });
@@ -59,6 +66,7 @@ const deleteProduct = asyncHandler(async (req, res) => {
 //@access  Private/Admin
 const createProduct = asyncHandler(async (req, res) => {
   console.log(req.user);
+  console.log(req.body);
   const product = new Product({
     name: "Product name",
     price: 0,
@@ -71,6 +79,8 @@ const createProduct = asyncHandler(async (req, res) => {
     numReviews: 0,
     description: "Describe the product",
   });
+
+  // console.log(product);
 
   const createdProduct = await product.save();
   res.status(201).json(createdProduct);

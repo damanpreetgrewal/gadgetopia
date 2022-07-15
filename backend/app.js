@@ -2,7 +2,7 @@ import express from "express";
 import dotenv from "dotenv";
 import path from "path";
 import connectDB from "./config/DataBase.js";
-import { notFound, errorHandler } from "./middleware/errorMiddleware.js";
+import notFound from "./middleware/errorMiddleware.js";
 import orderRouter from "./routes/orderRoutes.js";
 import morgan from "morgan";
 import colors from "colors";
@@ -27,8 +27,6 @@ app.use("/api/users", userRouter);
 app.use("/api/orders", orderRouter);
 app.use("/api/upload", uploadRouter);
 
-console.log("Daman - PayPal Client ID: ", process.env.PAYPAL_CLIENT_ID);
-
 app.get("/api/config/paypal", (req, res) =>
   res.send(process.env.PAYPAL_CLIENT_ID)
 );
@@ -43,13 +41,11 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
   );
 } else {
-  app.get("/", (req, res) => {
+  app.use(notFound);
+  app.use("/", (req, res) => {
     res.send("API is running....");
   });
 }
-
-app.use(notFound);
-app.use(errorHandler);
 
 const PORT = process.env.PORT || 5000;
 

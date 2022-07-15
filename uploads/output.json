@@ -1,0 +1,23 @@
+{
+  "products": [
+    {
+      "_id": "62d115347922460f43ec9200",
+      "user": "62d11504dc46a220464e13c7",
+      "name": "Laptop",
+      "image": "/uploads\\image-1657869644025.jpg",
+      "brand": "Product brand",
+      "description": "Describe the product",
+      "rating": 3,
+      "category": "Product category",
+      "numReviews": 0,
+      "price": 1200,
+      "countInStock": 0,
+      "reviews": [],
+      "createdAt": "2022-07-15T07:20:20.381Z",
+      "updatedAt": "2022-07-15T07:20:57.629Z",
+      "__v": 0
+    }
+  ],
+  "page": 1,
+  "pages": 1
+}
