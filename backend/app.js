@@ -1,12 +1,12 @@
 import express from "express";
 import dotenv from "dotenv";
 import path from "path";
+
 import connectDB from "./config/DataBase.js";
-import notFound from "./middleware/errorMiddleware.js";
-import orderRouter from "./routes/orderRoutes.js";
-import morgan from "morgan";
+
 import colors from "colors";
 import productRouter from "./routes/productRoutes.js";
+import orderRouter from "./routes/orderRoutes.js";
 import userRouter from "./routes/userRoutes.js";
 import uploadRouter from "./routes/uploadRoutes.js";
 
@@ -15,10 +15,6 @@ dotenv.config();
 connectDB();
 
 const app = express();
-
-if (process.env.NODE_ENV === "development") {
-  app.use(morgan("dev"));
-}
 
 app.use(express.json());
 
@@ -41,10 +37,12 @@ if (process.env.NODE_ENV === "production") {
     res.sendFile(path.resolve(__dirname, "frontend", "build", "index.html"))
   );
 } else {
-  app.use(notFound);
   app.use("/", (req, res) => {
     res.send("API is running....");
   });
+  
+ 
+  
 }
 
 const PORT = process.env.PORT || 5000;

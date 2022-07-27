@@ -28,9 +28,11 @@ const Header = () => {
         expand="lg"
         collapseOnSelect
       >
-        <Container>
+        <Container fluid>
           <LinkContainer to="/">
-            <Navbar.Brand className="brand">GADGETOPIA</Navbar.Brand>
+            <Navbar.Brand className="brand">
+              <img src="/images/gadgetopia.png"></img>
+            </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
@@ -41,6 +43,21 @@ const Header = () => {
               }}
             />
             <Nav className="ms-auto">
+            <LinkContainer to="/Shop">
+                <Nav.Link className="nav_profile">
+                  <i className="fas fa-user"></i> Shop
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/about">
+                <Nav.Link className="nav_profile">
+                  <i className="fas fa-user"></i> About US
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/contact">
+                <Nav.Link className="nav_profile">
+                  <i className="fas fa-user"></i> CONTACT US
+                </Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/cart">
                 <Nav.Link className="nav_cart">
                   <i className="fas fa-shopping-cart"></i> Cart{" "}

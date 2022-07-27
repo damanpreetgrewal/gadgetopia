@@ -114,16 +114,25 @@
 /*background Images */
 
 .slidemod:first-child {
-  background: url("https://i.imgur.com/jJYOdBg.jpg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/QtFV8A5.jpg") no-repeat center top/cover;
 }
 .slidemod:nth-child(2) {
-  background: url("https://i.imgur.com/7rwaigw.jpg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/8ZBcoMP.jpg") no-repeat center top/cover;
 }
 .slidemod:nth-child(3) {
-  background: url("https://i.imgur.com/3Obf6Tt.jpg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/wkLg5Jh.jpg") no-repeat center top/cover;
 }
 .slidemod:nth-child(4) {
-  background: url("https://i.imgur.com/laeEnPm.jpg") no-repeat center top/cover;
+  background: url("https://i.imgur.com/fzzE5Aj.jpg") no-repeat center top/cover;
+}
+.slidemod:nth-child(5) {
+  background: url("https://i.imgur.com/lUdTt0J.jpg") no-repeat center top/cover;
+}
+.slidemod:nth-child(6) {
+  background: url("https://i.imgur.com/cpLqY4w.jpg") no-repeat center top/cover;
+}
+.slidemod:nth-child(7) {
+  background: url("https://i.imgur.com/NTqLLtx.jpg") no-repeat center top/cover;
 }
 
 @media only screen and (max-width: 600px) {

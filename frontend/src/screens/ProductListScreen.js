@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { LinkContainer } from "react-router-bootstrap";
-import { Table, Button, Row, Col } from "react-bootstrap";
+import { Table, Button, Row, Col, Container} from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
@@ -14,6 +14,7 @@ import {
   PRODUCT_DELETE_RESET,
   PRODUCT_CREATE_RESET,
 } from "../constants/productConstants";
+
 const ProductListScreen = ({ history, match }) => {
   const [deleteSucceded, setDeleteSucceded] = useState(false);
   const pageNumber = match.params.pageNumber || 1;
@@ -33,6 +34,7 @@ const ProductListScreen = ({ history, match }) => {
   const { userInfo } = userLogin;
 
   const productCreate = useSelector((state) => state.productCreate);
+
   const {
     loading: loadingCreate,
     error: errorCreate,
@@ -48,7 +50,7 @@ const ProductListScreen = ({ history, match }) => {
       history.push("/login");
     }
     if (successCreate) {
-      history.push(`/admin/product/${createdProduct._id}/edit`);
+      history.push(`/admin/product/${createdProduct._id}/edit/`);
     } else {
       dispatch(listProducts("", pageNumber));
     }
@@ -64,9 +66,6 @@ const ProductListScreen = ({ history, match }) => {
 
   const createProductHandler = () => {
     dispatch(createProduct());
-    dispatch({
-      type: PRODUCT_DELETE_RESET,
-    });
   };
 
   const deleteHandler = (id) => {
@@ -81,7 +80,7 @@ const ProductListScreen = ({ history, match }) => {
     }
   };
   return (
-    <>
+    <> <Container>
       <Row className="align-items-center">
         <Col>
           <h1>Products Details</h1>
@@ -167,6 +166,7 @@ const ProductListScreen = ({ history, match }) => {
           <Paginate pages={pages} page={page} isAdmin={true} />
         </>
       )}
+      </Container>
     </>
   );
 };

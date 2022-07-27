@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { Col, Row } from "react-bootstrap";
 import Product from "../components/Product";
 import Message from "../components/Message";
+import Features from "../components/Features";
 import Loader from "../components/Loader";
 import Paginate from "../components/Paginate";
 import Meta from "../components/Meta";
@@ -44,6 +45,7 @@ const HomeScreen = ({ match }) => {
             <i style={{ color: "#E02401" }} className="fab fa-hotjar"></i>
           </h1>
           <ProductCarousel />
+          <Features />
         </>
       ) : (
         <Link
@@ -84,6 +86,7 @@ const HomeScreen = ({ match }) => {
             page={page}
             keyword={keyword ? keyword : ""}
           />
+          
         </>
       )}
     </>

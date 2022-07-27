@@ -6,23 +6,38 @@ import './css/slider.css';
 const Slider = () => {
      const SliderData = [
         {
-          title: 'Jackets & Coats',
-          subtitle :'Quality Matters.'
+          title: 'JBL Boom Box',
+          subtitle :'Be loud be proud be ready to party'
         },
         {
-            title: 'Find The Best Outfit',
-            subtitle :'With 30% Off'
-        },
-        {
- 
-            title: 'The Best Shoes',
-            subtitle :'Comfort For your long day'
+            title: 'Iphone 13 Pro Max',
+            subtitle :'Not just the tech you want'
         },
         {
  
-            title: 'Next Season Is here',
-            subtitle :'Enjoy your summer with us.'
-        }
+            title: 'Sony Camera Alpha A7',
+            subtitle :'Shoot for the best'
+        },
+        {
+ 
+            title: 'Apple iwatch Series 7',
+            subtitle :'Embrace your time'
+        },
+        {
+ 
+          title: 'Bose Headphones',
+          subtitle :'Sound that goes straight to your heart'
+      },
+      {
+
+          title: 'Macbook Pro 2022',
+          subtitle :'Think Different'
+      },
+      {
+
+        title: 'Samsung 55" UHD TV',
+        subtitle :'Bringing reality using virtuality'
+    }
       ];
     const [current, setCurrent] = useState(0);
     const length = SliderData.length;

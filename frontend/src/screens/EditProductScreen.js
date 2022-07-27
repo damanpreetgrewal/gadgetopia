@@ -35,12 +35,14 @@ const EditProductScreen = ({ match, history }) => {
   } = productUpdate;
 
   useEffect(() => {
+    console.log("successUpdate", successUpdate);
     if (successUpdate) {
       dispatch({
         type: PRODUCT_UPDATE_RESET,
       });
       history.push("/admin/productlist");
     } else {
+      console.log("product.name: ", product.name);
       if (!product.name || product._id !== productId) {
         dispatch(listProductsDetails(productId));
       } else {
@@ -85,7 +87,7 @@ const EditProductScreen = ({ match, history }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    console.log('Here on submit Button: ',productId);
+    console.log("Here on submit Button: ", productId);
     dispatch(
       updateProduct({
         _id: productId,
