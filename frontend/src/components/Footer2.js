@@ -11,7 +11,7 @@ const Container = tw.div`relative bg-gray-900 text-gray-100`;
 const Content = tw.div`max-w-screen-xl mx-auto pt-16 pb-8`;
 const FiveColumns = tw.div`flex flex-wrap justify-between`;
 
-const Column = tw.div`w-1/2 md:w-1/5 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left`;
+const Column = tw.div`md:w-1/5 mb-8 md:mb-0 text-sm sm:text-base text-center md:text-left`;
 const CompanyColumn = tw.div`text-center md:text-left mb-16 lg:mb-0 w-full lg:w-1/5`;
 
 const ColumnHeading = tw.h5`font-bold uppercase text-white`;
@@ -49,7 +49,7 @@ const CopyrightNotice = tw.div``;
 const CompanyInfo = tw.div``;
 
 const Divider = tw.div`my-8 border-b-2 border-gray-800`;
-export default () => {
+const Footer2 = () => {
   return (
     <Container>
       <Content>
@@ -93,23 +93,7 @@ export default () => {
               </LinkListItem>
             </LinkList>
           </Column>
-          <Column>
-            <ColumnHeading>Product</ColumnHeading>
-            <LinkList>
-              <LinkListItem>
-                <Link href="/login">Log In</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="/register">Register</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="/profile">Profile</Link>
-              </LinkListItem>
-              <LinkListItem>
-                <Link href="#">Extra</Link>
-              </LinkListItem>
-            </LinkList>
-          </Column>
+
           <Column>
             <ColumnHeading>Contact</ColumnHeading>
             <LinkList>
@@ -154,3 +138,5 @@ export default () => {
     </Container>
   );
 };
+
+export default Footer2;

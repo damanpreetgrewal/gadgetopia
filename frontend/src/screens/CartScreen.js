@@ -27,8 +27,8 @@ const CartScreen = ({ match, location, history }) => {
   };
 
   return (
-    <Container style={{  margin: "5rem", padding: "5rem" }}>
-      <Row >
+    <Container style={{ margin: "5rem", padding: "5rem" }}>
+      <Row>
         <Col>
           <h1>Shopping Cart</h1>
           {cartItems.length === 0 ? (
@@ -91,8 +91,8 @@ const CartScreen = ({ match, location, history }) => {
             justifyContent: "center",
           }}
         >
-          <Card >
-            <ListGroup variant="flush" className="my-3" size="lg">
+          <Card>
+            <ListGroup variant="flush" size="xxl">
               <ListGroup.Item size="lg">
                 <h2>
                   Subtotal ({cartItems.reduce((acc, item) => acc + item.qty, 0)}
@@ -103,7 +103,7 @@ const CartScreen = ({ match, location, history }) => {
                   .reduce((acc, item) => acc + item.qty * item.price, 0)
                   .toFixed(2)}
               </ListGroup.Item>
-              <ListGroup.Item size="lg">
+              <ListGroup.Item size="xl">
                 <Button
                   size="lg"
                   type="button"

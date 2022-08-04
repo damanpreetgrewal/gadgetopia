@@ -1,12 +1,7 @@
 import React, { useEffect } from "react";
 import Slider from "../components/Slider";
-import { useDispatch, useSelector } from "react-redux";
-import { Col, Row } from "react-bootstrap";
-import Product from "../components/Product";
-import Message from "../components/Message";
+import { useDispatch } from "react-redux";
 import Features from "../components/Features";
-import Loader from "../components/Loader";
-import Paginate from "../components/Paginate";
 import Meta from "../components/Meta";
 import { listProducts } from "../actions/productActions";
 import ProductCarousel from "../components/ProductCarousel";
@@ -20,12 +15,6 @@ const HomeScreen = ({ match }) => {
   console.log(keyword, pageNumber);
 
   const dispatch = useDispatch();
-
-  const productList = useSelector((state) => {
-    return state.productList;
-  });
-
-  const { loading, error, products, pages, page } = productList;
 
   useEffect(() => {
     dispatch(listProducts(keyword, pageNumber));
@@ -56,8 +45,8 @@ const HomeScreen = ({ match }) => {
           <i className="far fa-hand-point-left"></i> Go Back{" "}
         </Link>
       )}
-      <h1 className="latest-prods">Latest Products</h1>
-      {loading ? (
+      {/* <h1 className="latest-prods">Latest Products</h1> */}
+      {/* {loading ? (
         <Loader />
       ) : error ? (
         <Message variant="danger">
@@ -65,7 +54,7 @@ const HomeScreen = ({ match }) => {
         </Message>
       ) : (
         <>
-          <Row>
+          <Row style={{background:"rgb(250,250,250)"}}>
             {products.map((product) => {
               return (
                 <Col
@@ -88,7 +77,7 @@ const HomeScreen = ({ match }) => {
           />
           
         </>
-      )}
+      )} */}
     </>
   );
 };

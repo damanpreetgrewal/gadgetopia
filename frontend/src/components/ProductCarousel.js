@@ -43,7 +43,6 @@ const ProductCarousel = () => {
               style={{
                 //  height: '40vh',
                  display: 'flex',
-                 alignItems: 'center',
                  alignItems: 'center'
               }}
             />

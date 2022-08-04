@@ -9,7 +9,6 @@ import { ReactComponent as ArrowRightIcon } from "../images/arrow-right-icon.svg
 import SupportIconImage from "../images/support-icon.svg";
 import ShieldIconImage from "../images/shield-icon.svg";
 import CustomizeIconImage from "../images/customize-icon.svg";
-import { ReactComponent as SvgDecoratorBlob3 } from "../images/svg-decorator-blob-3.svg";
 
 const Heading = tw(SectionHeading)``;
 const Subheading = tw(SubheadingBase)`text-center mb-3`;
@@ -46,7 +45,7 @@ const Card = styled.a`
   }
 `;
 
-export default ({
+const ThreeColSimple = ({
   cards = [
     {
       imageSrc: ShieldIconImage,
@@ -111,3 +110,5 @@ export default ({
     </Container>
   );
 };
+
+export default ThreeColSimple;

@@ -39,7 +39,7 @@ const Textarea = styled(Input).attrs({ as: "textarea" })`
 
 const SubmitButton = tw(PrimaryButtonBase)`inline-block mt-8`;
 
-export default ({
+const TwoColContactUsWithIllustrationFullForm  = ({
   subheading = "Contact Us",
   heading = (
     <>
@@ -83,3 +83,6 @@ export default ({
     </Container>
   );
 };
+
+
+export default TwoColContactUsWithIllustrationFullForm;

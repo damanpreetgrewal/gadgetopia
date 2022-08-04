@@ -1,9 +1,7 @@
 import React from "react";
-import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import SearchBox from "./SearchBox";
 import { logout } from "../actions/userActions";
 
 const Header = () => {
@@ -31,19 +29,19 @@ const Header = () => {
         <Container fluid>
           <LinkContainer to="/">
             <Navbar.Brand className="brand">
-              <img src="/images/gadgetopia.png"></img>
+              <img src="/images/gadgetopia.png" alt="logo"></img>
             </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Route
+            {/* <Route
               render={({ history }) => {
                 //console.log('history: ',history);
                 return <SearchBox history={history} />;
               }}
-            />
+            /> */}
             <Nav className="ms-auto">
-            <LinkContainer to="/Shop">
+              <LinkContainer to="/Shop">
                 <Nav.Link className="nav_profile">
                   <i className="fas fa-user"></i> Shop
                 </Nav.Link>
@@ -71,12 +69,12 @@ const Header = () => {
                   title={userInfo.name}
                   id="username"
                 >
-                  <LinkContainer to="/profile">
+                  {/* <LinkContainer to="/profile">
                     <NavDropdown.Item>
                       {" "}
                       Profile <i className="fas fa-user"></i>
                     </NavDropdown.Item>
-                  </LinkContainer>
+                  </LinkContainer> */}
                   <NavDropdown.Item onClick={logoutHandler}>
                     Logout <i className="fas fa-sign-out-alt"></i>{" "}
                   </NavDropdown.Item>
@@ -100,7 +98,7 @@ const Header = () => {
                       Users <i className="fas fa-users"></i>
                     </NavDropdown.Item>
                   </LinkContainer>
-                  <LinkContainer to="/admin/productlist">
+                  {/* <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>
                       {" "}
                       Products <i className="fas fa-tablet-alt"></i>
@@ -111,7 +109,7 @@ const Header = () => {
                       {" "}
                       Orders <i className="fas fa-hand-holding"></i>
                     </NavDropdown.Item>
-                  </LinkContainer>
+                  </LinkContainer> */}
                 </NavDropdown>
               )}
             </Nav>

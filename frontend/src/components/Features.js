@@ -1,7 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { css } from "styled-components/macro";
 import { SectionHeading, Subheading as SubheadingBase } from "./Headings.js";
 import { SectionDescription } from "./Typography.js";
 
@@ -14,7 +13,7 @@ import FastIconImage from "../images/fast-icon.svg";
 import ReliableIconImage from "../images/reliable-icon.svg";
 import SimpleIconImage from "../images/simple-icon.svg";
 
-const Container = tw.div`relative bg-gray-700 -mx-8 px-8 text-gray-100 grid`;
+const Container = tw.div`relative bg-teal-700 -mx-8 px-8 text-gray-100 grid`;
 
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-24`}
@@ -51,31 +50,24 @@ const Card = styled.div`
   }
 `;
 
-export default ({
+const Features = ({
   cards = null,
   heading = "Amazing Features",
   subheading = "",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
 }) => {
-  /*
-   * This componets has an array of object denoting the cards defined below. Each object in the cards array can have the key (Change it according to your need, you can also add more objects to have more cards in this feature component) or you can directly pass this using the cards prop:
-   *  1) imageSrc - the image shown at the top of the card
-   *  2) title - the title of the card
-   *  3) description - the description of the card
-   *  If a key for a particular card is not provided, a default value is used
-   */
-
   const defaultCards = [
     {
       imageSrc: ShieldIconImage,
       title: "Secure",
-      description: "We strictly only deal with vendors that provide top notch security infrastructure."
+      description:
+        "We strictly only deal with vendors that provide top notch security infrastructure.",
     },
     { imageSrc: SupportIconImage, title: "24/7 Support" },
     { imageSrc: CustomizeIconImage, title: "Customizable" },
     { imageSrc: ReliableIconImage, title: "Reliable" },
     { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" }
+    { imageSrc: SimpleIconImage, title: "Easy" },
   ];
 
   if (!cards) cards = defaultCards;
@@ -96,7 +88,8 @@ export default ({
               <span className="textContainer">
                 <span className="title">{card.title || "Fully Secure"}</span>
                 <p className="description">
-                  {card.description || "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
+                  {card.description ||
+                    "Lorem ipsum donor amet siti ceali ut enim ad minim veniam, quis nostrud."}
                 </p>
               </span>
             </Card>
@@ -106,3 +99,6 @@ export default ({
     </Container>
   );
 };
+
+
+export default Features;

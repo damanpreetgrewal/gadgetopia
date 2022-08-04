@@ -1,7 +1,6 @@
 import React from "react";
 import tw from "twin.macro";
 import styled from "styled-components";
-import { css } from "styled-components/macro"; //eslint-disable-line
 import { SectionHeading, Subheading as SubheadingBase } from "./Headings.js";
 import { PrimaryButton as PrimaryButtonBase } from "./Buttons.js";
 import TeamIllustrationSrc from "../images/team-illustration-2.svg";
@@ -41,7 +40,7 @@ const PrimaryButton = styled(PrimaryButtonBase)((props) => [
   props.buttonRounded && tw`rounded-full`,
 ]);
 
-export default ({
+const TwoColWithButton = ({
   subheading = "Our Expertise",
   heading = (
     <>
@@ -94,3 +93,5 @@ export default ({
     </Container>
   );
 };
+
+export default TwoColWithButton;
