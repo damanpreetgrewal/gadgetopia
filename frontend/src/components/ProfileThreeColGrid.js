@@ -151,7 +151,6 @@ const ProfileThreeColGrid = ({
         <HeadingContainer>
           {subheading && <Subheading>{subheading}</Subheading>}
           {heading && <Heading>{heading}</Heading>}
-          {description && <Description>{description}</Description>}
         </HeadingContainer>
         <Cards>
           {cards.map((card, index) => (
