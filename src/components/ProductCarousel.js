@@ -21,23 +21,23 @@ const ProductCarousel = () => {
     <Message variant="error">{error}</Message>
   ) : (
     <Carousel
+      className="d-block w-100"
       pause="hover"
       fade
-      style={{
-        backgroundImage:
-          'url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png")',
-      }}
       keyboard
     >
       {products.map((product, i) => (
         <Carousel.Item key={product._id} id={i}>
           <Link to={`/product/${product._id}`}>
             <Image
-              className="carousel-img"
+              className="carousel-img img-fluid"
               src={product.image}
               alt={product.name}
-              fluid
-            />
+              style={{
+                 display: 'flex',
+                 alignItems: 'center'
+              }}
+            />  
             <Carousel.Caption className="carousel-caption">
               <h2>
                 {product.name} (${product.price})

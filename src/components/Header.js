@@ -1,9 +1,7 @@
 import React from "react";
-import { Route } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { LinkContainer } from "react-router-bootstrap";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
-import SearchBox from "./SearchBox";
 import { logout } from "../actions/userActions";
 
 const Header = () => {
@@ -21,27 +19,45 @@ const Header = () => {
   return (
     <header>
       <Navbar
-        style={{ boxShadow: "0 10px 5px 2px rgba(0,0,0,0.16)" }}
+        style={{
+          boxShadow: "0 10px 5px 2px rgba(0,0,0,0.16)",
+          background: "#1a202c",
+        }}
         className="brand_body"
-        bg="dark"
         variant="dark"
         expand="lg"
         collapseOnSelect
-        sticky="top"
       >
-        <Container>
+        <Container fluid>
           <LinkContainer to="/">
-            <Navbar.Brand className="brand">GADGETOPIA</Navbar.Brand>
+            <Navbar.Brand className="brand">
+              <img src="/images/gadgetopia.png" alt="logo"></img>
+            </Navbar.Brand>
           </LinkContainer>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Route
+            {/* <Route
               render={({ history }) => {
                 //console.log('history: ',history);
                 return <SearchBox history={history} />;
               }}
-            />
+            /> */}
             <Nav className="ms-auto">
+              <LinkContainer to="/Shop">
+                <Nav.Link className="nav_profile">
+                  <i className="fas fa-user"></i> Shop
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/about">
+                <Nav.Link className="nav_profile">
+                  <i className="fas fa-user"></i> About US
+                </Nav.Link>
+              </LinkContainer>
+              <LinkContainer to="/contact">
+                <Nav.Link className="nav_profile">
+                  <i className="fas fa-user"></i> CONTACT US
+                </Nav.Link>
+              </LinkContainer>
               <LinkContainer to="/cart">
                 <Nav.Link className="nav_cart">
                   <i className="fas fa-shopping-cart"></i> Cart{" "}
