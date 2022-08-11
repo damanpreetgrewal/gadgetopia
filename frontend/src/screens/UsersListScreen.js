@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Table, Button } from 'react-bootstrap'
+import { Table, Button , Container } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -40,7 +40,7 @@ const UsersListScreen = ({ history }) => {
         }
     }
     return (
-        <>
+        <Container  className='mt-5 pt-5' >
             <h1>Users Details</h1>
             {deleteSucceded && <Message variant='success'>User deleted successfuly <i className='fas fa-check'></i></Message>
             }
@@ -78,7 +78,7 @@ const UsersListScreen = ({ history }) => {
                 </Table>
             )}
 
-        </>
+        </Container>
     )
 }
 

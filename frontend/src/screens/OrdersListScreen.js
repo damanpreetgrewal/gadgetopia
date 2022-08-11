@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { LinkContainer } from 'react-router-bootstrap'
-import { Table, Button } from 'react-bootstrap'
+import { Table, Button, Container } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -24,7 +24,7 @@ const OrdersListScreen = ({ history }) => {
     }, [dispatch, history, userInfo])
 
     return (
-        <>
+        <Container  className='mt-5 pt-5' >
             <h1>Orders Details</h1>
             {loading ? <Loader /> : error ? <Message variant='danger'>{error} <i class="fas fa-exclamation-triangle"></i></Message> : (
                 <Table variant='secondary' striped bordered hover responsive size='sm'>
@@ -61,7 +61,7 @@ const OrdersListScreen = ({ history }) => {
                 </Table>
             )}
 
-        </>
+        </Container>
     )
 }
 

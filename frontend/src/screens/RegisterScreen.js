@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-import { Form, Button, Row, Col } from 'react-bootstrap'
+import { Form, Button, Row, Col, Container } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer'
 import Message from '../components/Message'
@@ -37,6 +37,7 @@ const RegisterScreen = ({ location, history }) => {
 
     }
     return (
+        <Container style={{  border: "1px solid black" }} className='mt-5 pt-5' >
         <FormContainer>
             <h1>Sign Up</h1>
             {message && <Message variant='danger'>{message}</Message>}
@@ -73,6 +74,7 @@ const RegisterScreen = ({ location, history }) => {
                 </Col>
             </Row>
         </FormContainer>
+        </Container>
     )
 }
 

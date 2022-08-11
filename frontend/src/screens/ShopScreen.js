@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Col, Row } from "react-bootstrap";
+import { Col, Row, Container } from "react-bootstrap";
 import Product from "../components/Product";
 import Message from "../components/Message";
 import Loader from "../components/Loader";
@@ -28,7 +28,7 @@ const ShopScreen = ({ match }) => {
   }, [dispatch, keyword, pageNumber]);
 
   return (
-    <>
+    <Container>
       <Meta />
       <h1 className="latest-prods">Latest Products</h1>
       {loading ? (
@@ -60,10 +60,9 @@ const ShopScreen = ({ match }) => {
             page={page}
             keyword={keyword ? keyword : ""}
           />
-          
         </>
       )}
-    </>
+    </Container>
   );
 };
 

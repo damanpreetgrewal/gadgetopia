@@ -27,7 +27,7 @@ const CartScreen = ({ match, location, history }) => {
   };
 
   return (
-    <Container style={{ margin: "5rem", padding: "5rem" }}>
+    <Container  className='mt-5 pt-5' >
       <Row>
         <Col>
           <h1>Shopping Cart</h1>

@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import axios from 'axios'
 import { PayPalButton } from 'react-paypal-button-v2'
-import { Row, Col, ListGroup, Image, Card, Button } from 'react-bootstrap'
+import { Row, Col, ListGroup, Image, Card, Button, Container } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import Message from '../components/Message'
 import Loader from '../components/Loader'
@@ -76,7 +76,7 @@ const OrderScreen = ({ match, history }) => {
         dispatch(deliverOrder(order))
     }
     return loading ? <Loader /> : error ? <Message variant='danger'>{error} <i class="fas fa-exclamation-triangle"></i></Message> :
-        <>
+    <Container  className='mt-5 pt-5' >
             <h1>Order {order._id}</h1>
             <Row>
                 <Col md={8}>
@@ -173,7 +173,7 @@ const OrderScreen = ({ match, history }) => {
                     </Card>
                 </Col>
             </Row>
-        </>
+        </Container>
 }
 
 export default OrderScreen

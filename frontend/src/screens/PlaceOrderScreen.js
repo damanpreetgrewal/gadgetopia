@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Button, Row, Col, ListGroup, Image, Card } from "react-bootstrap";
+import { Button, Row, Col, ListGroup, Image, Card , Container} from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import Message from "../components/Message";
 import CheckoutSteps from "../components/CheckoutSteps";
@@ -56,7 +56,7 @@ const PlaceOrderScreen = ({ history }) => {
     });
   };
   return (
-    <>
+    <Container className="mt-5 pt-5">
       <CheckoutSteps step1 step2 step3 />
       <Row>
         <Col md={8}>
@@ -171,7 +171,7 @@ const PlaceOrderScreen = ({ history }) => {
           </Card>
         </Col>
       </Row>
-    </>
+    </Container>
   );
 };
 

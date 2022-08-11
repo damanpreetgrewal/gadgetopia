@@ -73,7 +73,7 @@ const ProductScreen = ({ match }) => {
   return (
     <>
       <Container>
-        <Link className="btn btn-outline-dark my-3" to="/">
+        <Link className="btn btn-outline-dark my-3" to="/Shop">
           <i className="far fa-hand-point-left"></i> Go Back
         </Link>
         {loading ? (

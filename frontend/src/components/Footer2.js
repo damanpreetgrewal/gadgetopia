@@ -104,10 +104,10 @@ const Footer2 = () => {
                 </Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Extra</Link>
+                <Link href="/login">Login</Link>
               </LinkListItem>
               <LinkListItem>
-                <Link href="#">Extra</Link>
+                <Link href="/Register">Register</Link>
               </LinkListItem>
             </LinkList>
           </Column>

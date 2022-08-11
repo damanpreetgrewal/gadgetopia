@@ -19,9 +19,11 @@ const Header = () => {
   return (
     <header>
       <Navbar
-        style={{ boxShadow: "0 10px 5px 2px rgba(0,0,0,0.16)" }}
+        style={{
+          boxShadow: "0 10px 5px 2px rgba(0,0,0,0.16)",
+          background: "#1a202c",
+        }}
         className="brand_body"
-        bg="dark"
         variant="dark"
         expand="lg"
         collapseOnSelect
@@ -69,12 +71,12 @@ const Header = () => {
                   title={userInfo.name}
                   id="username"
                 >
-                  {/* <LinkContainer to="/profile">
+                  <LinkContainer to="/profile">
                     <NavDropdown.Item>
                       {" "}
                       Profile <i className="fas fa-user"></i>
                     </NavDropdown.Item>
-                  </LinkContainer> */}
+                  </LinkContainer>
                   <NavDropdown.Item onClick={logoutHandler}>
                     Logout <i className="fas fa-sign-out-alt"></i>{" "}
                   </NavDropdown.Item>
@@ -98,7 +100,7 @@ const Header = () => {
                       Users <i className="fas fa-users"></i>
                     </NavDropdown.Item>
                   </LinkContainer>
-                  {/* <LinkContainer to="/admin/productlist">
+                  <LinkContainer to="/admin/productlist">
                     <NavDropdown.Item>
                       {" "}
                       Products <i className="fas fa-tablet-alt"></i>
@@ -109,7 +111,7 @@ const Header = () => {
                       {" "}
                       Orders <i className="fas fa-hand-holding"></i>
                     </NavDropdown.Item>
-                  </LinkContainer> */}
+                  </LinkContainer>
                 </NavDropdown>
               )}
             </Nav>

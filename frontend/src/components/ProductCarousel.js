@@ -24,13 +24,6 @@ const ProductCarousel = () => {
       className="d-block w-100"
       pause="hover"
       fade
-      style={{
-        backgroundImage:
-          'url("https://cdn.pixabay.com/photo/2017/02/12/12/42/wall-2059909_640.png")',
-        // maxWidth: '700px',
-        // margin: '0 auto'
-        
-      }}
       keyboard
     >
       {products.map((product, i) => (
@@ -41,11 +34,10 @@ const ProductCarousel = () => {
               src={product.image}
               alt={product.name}
               style={{
-                //  height: '40vh',
                  display: 'flex',
                  alignItems: 'center'
               }}
-            />
+            />  
             <Carousel.Caption className="carousel-caption">
               <h2>
                 {product.name} (${product.price})

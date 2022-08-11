@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
-import { Form, Button } from "react-bootstrap";
+import { Form, Button, Container } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 import FormContainer from "../components/FormContainer";
 import Message from "../components/Message";
@@ -103,7 +103,7 @@ const EditProductScreen = ({ match, history }) => {
     );
   };
   return (
-    <>
+    <Container  className='mt-5 mb-5 pt-5' >
       <Link to="/admin/productlist" className="btn btn-outline-dark my-3">
         <i className="far fa-hand-point-left"></i> Go Back
       </Link>
@@ -240,7 +240,7 @@ const EditProductScreen = ({ match, history }) => {
           </Form>
         )}
       </FormContainer>
-    </>
+    </Container>
   );
 };
 

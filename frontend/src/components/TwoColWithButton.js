@@ -47,7 +47,7 @@ const TwoColWithButton = ({
       Designed & Developed by <span tw="text-primary-500">Professionals.</span>
     </>
   ),
-  description = "At Gadgetopia, our purpose is to enrich the lives of our customers through technology.",
+  description = "Welcome to Gadgetopia, your number one source for all gadgets, We're dedicated to giving you the very best of electronics, with a focus on three characteristics, ie: dependability, customer service and guarantee.Founded in 2022, Gadgetopia has come a long way from its beginnings in a starting location in Cambridge, Ontario, CA. We mainly focus on pocket friendly electronics ie: cheaper electronic devices at one place. ",
   primaryButtonText = "Learn More",
   primaryButtonUrl = "/shop",
   imageSrc = TeamIllustrationSrc,

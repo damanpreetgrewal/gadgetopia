@@ -13,14 +13,14 @@ import FastIconImage from "../images/fast-icon.svg";
 import ReliableIconImage from "../images/reliable-icon.svg";
 import SimpleIconImage from "../images/simple-icon.svg";
 
-const Container = tw.div`relative bg-teal-700 -mx-8 px-8 text-gray-100 grid`;
+const Container = tw.div`relative -mx-8 px-8 text-black grid`;
 
 const ThreeColumnContainer = styled.div`
   ${tw`flex flex-col items-center md:items-stretch md:flex-row flex-wrap md:justify-center max-w-screen-lg mx-auto py-20 md:py-24`}
 `;
-const Subheading = tw(SubheadingBase)`mb-4 text-gray-100`;
+const Subheading = tw(SubheadingBase)`mb-4 text-black`;
 const Heading = tw(SectionHeading)`w-full`;
-const Description = tw(SectionDescription)`w-full text-center text-gray-300`;
+const Description = tw(SectionDescription)`w-full text-center text-black`;
 
 const VerticalSpacer = tw.div`mt-10 w-full`;
 
@@ -46,7 +46,7 @@ const Card = styled.div`
   }
 
   .description {
-    ${tw`mt-2 font-normal text-gray-400 leading-snug`}
+    ${tw`mt-2 font-normal leading-snug`}
   }
 `;
 
@@ -54,7 +54,7 @@ const Features = ({
   cards = null,
   heading = "Amazing Features",
   subheading = "",
-  description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+  description = "What makes us Special? Content with reliability, quality with speed.",
 }) => {
   const defaultCards = [
     {
@@ -63,11 +63,34 @@ const Features = ({
       description:
         "We strictly only deal with vendors that provide top notch security infrastructure.",
     },
-    { imageSrc: SupportIconImage, title: "24/7 Support" },
-    { imageSrc: CustomizeIconImage, title: "Customizable" },
-    { imageSrc: ReliableIconImage, title: "Reliable" },
-    { imageSrc: FastIconImage, title: "Fast" },
-    { imageSrc: SimpleIconImage, title: "Easy" },
+    {
+      imageSrc: SupportIconImage,
+      title: "24/7 Support",
+      description:
+        "You won't only find supplies and equipment at Gadgetopia. We are also available around-the-clock for any technology-related emergency.",
+    },
+    {
+      imageSrc: CustomizeIconImage,
+      title: "Customizable",
+      description: "Filter out the most and find out the precise.",
+    },
+    {
+      imageSrc: ReliableIconImage,
+      title: "Reliable",
+      description:
+        "We only sell products that are verified to ensure they look like what the customer ordered.",
+    },
+    {
+      imageSrc: FastIconImage,
+      title: "Fast",
+      description:
+        "We have the well-built logistics support to ensure the fastest delivery amongst the competitors",
+    },
+    {
+      imageSrc: SimpleIconImage,
+      title: "Easy",
+      description: "More you provide information, the easier it to order.",
+    },
   ];
 
   if (!cards) cards = defaultCards;
@@ -99,6 +122,5 @@ const Features = ({
     </Container>
   );
 };
-
 
 export default Features;

@@ -31,17 +31,17 @@ export default () => {
           {
             imageSrc: SupportIconImage,
             title: "24/7 Support",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            description: "You won't only find supplies and equipment at Gadgetopia. We are also available around-the-clock for any technology-related emergency. Although we have already stated that we are flexible, the 24-7 Service is mainly focused on our solutions services."
           },
           {
             imageSrc: ShieldIconImage,
             title: "Strong Teams",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            description: "Our team is enthusiastic about the results of our work and the favourable changes it brings about. We collaborate with the key players in your domain and own the outcomes."
           },
           {
             imageSrc: CustomerLoveIconImage,
             title: "Customer Satisfaction",
-            description: "Lorem ipsum donor amet siti ceali placeholder text alipiscing elit sed do eiusmod temport"
+            description: "We have the well-built logistics support to ensure the fastest delivery amongst the competitorsThe Gadetopia Team focuses on the needs of the customer, fulfils their requirements, and works hard to go above and beyond their expectations."
           },
         ]}
         linkText=""

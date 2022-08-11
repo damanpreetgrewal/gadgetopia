@@ -77,7 +77,7 @@ const ProductListScreen = ({ history, match }) => {
     }
   };
   return (
-    <>
+    <Container  className='mt-5 pt-5' >
       {" "}
       <Container>
         <Row className="align-items-center">
@@ -166,7 +166,7 @@ const ProductListScreen = ({ history, match }) => {
           </>
         )}
       </Container>
-    </>
+    </Container>
   );
 };
 

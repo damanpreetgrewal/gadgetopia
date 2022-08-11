@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Form, Button } from 'react-bootstrap'
+import { Form, Button, Container } from 'react-bootstrap'
 import { useDispatch, useSelector } from 'react-redux'
 import FormContainer from '../components/FormContainer'
 import CheckoutSteps from '../components/CheckoutSteps'
@@ -21,6 +21,7 @@ const ShippingScreen = ({ history }) => {
         history.push('/payment')
     }
     return (
+        <Container  className='mt-5 pt-5'>
         <FormContainer>
             <CheckoutSteps step1 />
             <h1>Shipping</h1>
@@ -46,6 +47,7 @@ const ShippingScreen = ({ history }) => {
                 </Button>
             </Form>
         </FormContainer>
+        </Container>
     )
 }
 

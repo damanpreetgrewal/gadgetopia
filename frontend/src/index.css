@@ -148,41 +148,53 @@ h1 {
   }
 }
 
-/* @keyframes pulsate {
-  0%,
-  18%,
-  22%,
-  25%,
-  53%,
-  57%,
-  100% {
-    text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #5271ff,
-      0 0 80px #5271ff, 0 0 90px #5271ff, 0 0 100px #5271ff, 0 0 150px #5271ff;
-  }
-  20%,
-  24%,
-  55% {
-    text-shadow: none;
-  }
-  0% {
-    text-shadow: 0 0 4px #fff, 0 0 10px #fff, 0 0 18px #fff, 0 0 38px #5271ff,
-      0 0 73px #5271ff, 0 0 80px #5271ff, 0 0 94px #5271ff, 0 0 140px #5271ff;
-  }
-} */
 .carousel-item-next,
 .carousel-item-prev,
 .carousel-item.active {
   display: flex;
   align-items: center;
   justify-content: center;
+  outline: black;
+  
 }
 .carousel-caption {
   position: absolute;
   top: -15px;
 }
 
+.carousel-item-next {
+  color: red;
+}
+
+.carousel-item-prev {
+  color: red;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  height: 100px;
+  width: 100px;
+  outline: black;
+  background-size: 100%, 100%;
+  
+  
+}
+
+.carousel-control-next-icon:after
+{
+  content: '>';
+  font-size: 55px;
+  color: rgb(0, 0, 0);
+}
+
+.carousel-control-prev-icon:after {
+  content: '<';
+  font-size: 55px;
+  color: rgb(0, 0, 0);
+}
+
 .carousel-caption h2 {
-  color: white;
+  color: black;
   margin-top: 20px;
 }
 .carousel-img {
