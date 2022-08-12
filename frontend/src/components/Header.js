@@ -45,17 +45,17 @@ const Header = () => {
             <Nav className="ms-auto">
               <LinkContainer to="/Shop">
                 <Nav.Link className="nav_profile">
-                  <i className="fas fa-user"></i> Shop
+                <i class="fa-solid fa-store"></i>Shop
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/about">
                 <Nav.Link className="nav_profile">
-                  <i className="fas fa-user"></i> About US
+                <i class="fa-solid fa-address-card"></i> About US
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/contact">
                 <Nav.Link className="nav_profile">
-                  <i className="fas fa-user"></i> CONTACT US
+                <i class="fa-solid fa-globe"></i> CONTACT US
                 </Nav.Link>
               </LinkContainer>
               <LinkContainer to="/cart">
@@ -84,7 +84,7 @@ const Header = () => {
               ) : (
                 <LinkContainer to="/login">
                   <Nav.Link className="nav_profile">
-                    <i className="fas fa-user"></i> Sign In
+                  <i class="fa-solid fa-right-to-bracket"></i> Sign In
                   </Nav.Link>
                 </LinkContainer>
               )}
