@@ -23,7 +23,7 @@ const HomeScreen = ({ match }) => {
   return (
     <>
       <Meta />
-      <Slider />
+      <Slider/>
       {!keyword ? (
         <>
           <h1
